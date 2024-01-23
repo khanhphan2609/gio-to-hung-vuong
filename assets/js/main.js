@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    updateProgressBar(3000);
+    updateProgressBar();
 
     // The le
     $(document).on('click', '.modal-guide', function() {
@@ -57,7 +57,7 @@ function updateProgressBar(goldAmount) {
         $(".chart-to-get__item:eq(1) img").attr("src", "/assets/img/get-btn-on.png");
     } else if (goldAmount >= 3000) {
         $(".chart-to-get__item img").attr("src", "/assets/img/get-btn-on.png");
-    } 
+    }
     else {
         $(".chart-to-get__item img").attr("src", "/assets/img/get-btn-off.png"); // Change image to off state
     }
@@ -68,29 +68,119 @@ function calculateProgressWidth(goldAmount) {
     var maxGoldAmount = 3000;
 
     // Calculate the progress width based on gold amount
-    //3000
-    if (goldAmount > 2000) {
-        var progressWidth = (goldAmount / maxGoldAmount) * 100;
-    } 
-    //2000
-    else if (goldAmount > 1200) {
-        var progressWidth = (goldAmount / maxGoldAmount) * 111;
-    }  
-    //200
-    else if (goldAmount == 200) {
-        var progressWidth = 2.5;
+
+    // Mobile & Tablet
+    if (window.innerWidth <= 992) {
+        //5000
+        if (goldAmount > 5000) {
+            var progressWidth = 100;
+        }
+        else if (goldAmount > 2000 && goldAmount <= 5000) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 12.5 + 73.4;
+        }
+        // <2000
+        else if (goldAmount == 2000) {
+            var progressWidth = 73.4;
+        }
+        // <2000
+        else if (goldAmount < 2000 && goldAmount >= 1900) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 115;
+        }
+        // <1900
+        else if (goldAmount >= 1700 && goldAmount < 1900) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 120;
+        }
+        // <1700
+        else if (goldAmount >= 1500 && goldAmount < 1700) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 125;
+        }
+        // <1500
+        else if (goldAmount < 1500 && goldAmount >= 1300) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 130;
+        }
+        //1300
+        else if (goldAmount > 1000 && goldAmount < 1300) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 145;
+        }
+        // 500
+        else if (goldAmount > 200 && goldAmount <= 500) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 182;
+        }
+        //200
+        else if (goldAmount == 200) {
+            var progressWidth = 9;
+        }
+        // <200
+        else if (goldAmount < 200) {
+            var progressWidth = (goldAmount / maxGoldAmount) * 160;
+        }
+        // 1000
+        else {
+            var progressWidth = (goldAmount / maxGoldAmount) * 155;
+        }
+
+        return progressWidth;
     }
-    // <200
-    else if (goldAmount < 200) {
-        var progressWidth = (goldAmount / maxGoldAmount) * 40;
+    
+    //3000
+    if (goldAmount > 3000) {
+        var progressWidth = 100;
+    } 
+    // <=3000
+    else if (goldAmount > 2700 && goldAmount <= 3000) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 98;
+    }
+    // <2700
+    else if (goldAmount > 2500 && goldAmount <= 2700) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 100;
+    }
+    // <2500
+    else if (goldAmount > 2200 && goldAmount <= 2400) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 105;
+    }
+    // <2300
+    else if (goldAmount > 2000 && goldAmount <= 2200) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 108;
+    }
+    // <2000
+    else if (goldAmount == 2000) {
+        var progressWidth = 73.4;
+    }
+    // <2000
+    else if (goldAmount < 2000 && goldAmount >= 1900) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 115;
+    }
+    // <1900
+    else if (goldAmount >= 1700 && goldAmount < 1900) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 120;
+    }
+    // <1700
+    else if (goldAmount >= 1500 && goldAmount < 1700) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 125;
+    }
+    // <1500
+    else if (goldAmount < 1500 && goldAmount >= 1300) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 130;
+    }
+    //1300
+    else if (goldAmount > 1000 && goldAmount < 1300) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 140;
     }
     // 500
     else if (goldAmount > 200 && goldAmount <= 500) {
-        var progressWidth = (goldAmount / maxGoldAmount) * 158;
+        var progressWidth = (goldAmount / maxGoldAmount) * 161;
+    }
+    //200
+    else if (goldAmount == 200) {
+        var progressWidth = 3.5;
+    }
+    // <200
+    else if (goldAmount < 200) {
+        var progressWidth = (goldAmount / maxGoldAmount) * 60;
     }
     // 1000
     else {
-        var progressWidth = (goldAmount / maxGoldAmount) * 150;
+        var progressWidth = (goldAmount / maxGoldAmount) * 150.2;
     }
 
     return progressWidth;
