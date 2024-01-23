@@ -1,0 +1,103 @@
+/*  */
+#dialogGuide .modal-content {
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+#dialogGuide .modal-bg {
+    min-height: 40vw;
+    background-image: url('/assets/img/modal/thele-modal-background.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+#dialogGuide .modal-title {
+    margin: 4vw 4vw 0 0;
+}
+
+#dialogGuide .close {
+    float: right;
+    margin: -2vw 3.6vw 0 0;
+    background-color: transparent;
+    border: none;
+    width: 2vw;
+    height: 2vw;
+    color: transparent;
+}
+
+#dialogGuide form.modal-form {
+    width: 38vw;
+    height: 29vw;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#dialogGuide form.modal-form::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+#dialogGuide .modal-text {
+    margin: 1vw 7vw 0vw 2vw;
+    font-size: 1.2rem;
+}
+
+
+/* Styles for laptops mini*/
+@media only screen and (min-width: 993px)  and (max-width: 1600px) {
+    #dialogGuide .modal-dialog {
+        margin: 2vw 30vw;
+    }
+    #dialogGuide .modal-content {
+        font-size: 1rem;
+        width: 44vw;
+    }
+    #dialogGuide .modal-title {
+        margin: 3.4vw 4vw 0 0;
+        font-size: 1.6rem;
+    }
+    #dialogGuide .close {
+        margin: -4vw 3vw 0 0;
+        width: 4vw;
+        height: 4vw;
+    }
+    #dialogGuide .modal-text {
+        margin: 1vw 0vw -10vw 2vw;
+        font-size: 1rem;
+    }
+}
+
+/* Styles for mobile & tablet devices */
+@media only screen and (max-width: 992px) {
+    #dialogGuide .modal-dialog {
+        margin-top: 30vw;
+    }
+    #dialogGuide .modal-bg {
+        height: 88vw;
+    }
+    #dialogGuide .modal-title {
+        margin: 8vw 8vw 0 0;
+        font-size: 1rem;
+    }
+    #dialogGuide .close {
+        margin: -10vw 5vw 0 0;
+        width: 10vw;
+        height: 10vw;
+    }
+    #dialogGuide form.modal-form {
+        width: 84vw;
+        height: 62vw;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    #dialogGuide .modal-text {
+        margin: 0vw 7vw 0vw 2vw;
+        font-size: 0.6rem;
+    }
+
+    #dialogGuide .modal-dialog {
+        margin-left: 6vw;
+    }
+}

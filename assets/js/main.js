@@ -1,7 +1,36 @@
 $(document).ready(function () {
     updateProgressBar(3000);
+
+    // The le
+    $(document).on('click', '.modal-guide', function() {
+        DialogGuide();
+    });
+    $('.menu').on('click', '.login-in', function() {
+        CommingSoon();
+    });
+    $('.get-gifts').on('click', '.get-gifts__item', function() {
+        AskToLogIn();
+    });
+    $('.chart-to-get').on('click', '.chart-to-get__item', function() {
+        AskToLogIn();
+    });
 });
 
+// Modal
+function DialogGuide() {
+    $('#dialogGuide').modal('toggle');
+};
+
+// SweetAlert
+function AskToLogIn() {
+    swal("Vui lòng đăng nhập!");
+}
+
+function CommingSoon() {
+    swal("Comming Soon");
+}
+
+// ProgressBar
 function updateProgressBar(goldAmount) {
     // Get the current gold amount
     console.log(goldAmount);

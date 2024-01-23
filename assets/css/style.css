@@ -87,10 +87,4 @@
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-
-.hide-on-pc {
-    display: none;
-}
+    align-items: flex-start
