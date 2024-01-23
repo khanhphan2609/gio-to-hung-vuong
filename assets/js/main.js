@@ -14,6 +14,9 @@ $(document).ready(function () {
     $('.chart-to-get').on('click', '.chart-to-get__item', function() {
         AskToLogIn();
     });
+    $('.menu-mob').on('click', '.history', function() {
+        AskToLogIn();
+    });
 });
 
 // Modal
@@ -42,24 +45,24 @@ function updateProgressBar(goldAmount) {
     $(".progress-bar__inner").width(progressWidth + '%');
 
     if (goldAmount >= 200 && goldAmount < 500) {
-        $(".chart-to-get__item:first img").attr("src", "/assets/img/get-btn-on.png")
+        $(".chart-to-get__item:first img").addClass("btn-on");
     } else if (goldAmount >= 500 && goldAmount < 1000) {
-        $(".chart-to-get__item:first img").attr("src", "/assets/img/get-btn-on.png");
-        $(".chart-to-get__item:eq(1) img").attr("src", "/assets/img/get-btn-on.png");
+        $(".chart-to-get__item:first img").addClass("btn-on");
+        $(".chart-to-get__item:eq(1) img").addClass("btn-on");
     } else if (goldAmount >= 1000 && goldAmount < 2000) {
-        $(".chart-to-get__item:first img").attr("src", "/assets/img/get-btn-on.png");
-        $(".chart-to-get__item:eq(1) img").attr("src", "/assets/img/get-btn-on.png");
-        $(".chart-to-get__item:eq(2) img").attr("src", "/assets/img/get-btn-on.png");
+        $(".chart-to-get__item:first img").addClass("btn-on");
+        $(".chart-to-get__item:eq(1) img").addClass("btn-on");
+        $(".chart-to-get__item:eq(2) img").addClass("btn-on");
     } else if (goldAmount >= 2000  && goldAmount < 3000) {
-        $(".chart-to-get__item:first img").attr("src", "/assets/img/get-btn-on.png");
-        $(".chart-to-get__item:eq(2) img").attr("src", "/assets/img/get-btn-on.png");
-        $(".chart-to-get__item:eq(3) img").attr("src", "/assets/img/get-btn-on.png");
-        $(".chart-to-get__item:eq(1) img").attr("src", "/assets/img/get-btn-on.png");
+        $(".chart-to-get__item:first img").addClass("btn-on");
+        $(".chart-to-get__item:eq(2) img").addClass("btn-on");
+        $(".chart-to-get__item:eq(3) img").addClass("btn-on");
+        $(".chart-to-get__item:eq(1) img").addClass("btn-on");
     } else if (goldAmount >= 3000) {
-        $(".chart-to-get__item img").attr("src", "/assets/img/get-btn-on.png");
+        $(".chart-to-get__item img").addClass("btn-on");
     }
     else {
-        $(".chart-to-get__item img").attr("src", "/assets/img/get-btn-off.png"); // Change image to off state
+        $(".chart-to-get__item img")
     }
 }
 

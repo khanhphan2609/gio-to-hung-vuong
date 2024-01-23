@@ -81,19 +81,31 @@
     .progress-bar {
         height: 4vw;
         width: 136vw;
-        margin: -34vw 24vw;
+        margin: -34vw 34vw;
         transform: rotate(90deg);
         transform-origin: left bottom;
     }
 
     .progress-gifts {
-        margin: 32vw 6vw 0;
+        margin: 32vw 16vw 0;
         display: grid;
         justify-content: flex-start;
     }
     .progress-gifts img {
         width: 50%;
         margin: 7vw 0;
+    }
+
+
+    .menu-mob {
+        margin-top: 3vw;
+        display: flex;
+        width: 100vw;
+        height: 14vw;
+    }
+    .menu-mob__item {
+        width: 25vw;
+        height: 14vw;
     }
 
     .hide-on-mob-tablet {

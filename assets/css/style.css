@@ -60,6 +60,11 @@
     margin: 0 9vw;
 }
 
+.chart-to-get img {
+    cursor: default;
+    filter: grayscale(1);
+}
+
 .progress-bar {
     position: relative;
     height: 2.1vw;
@@ -91,12 +96,17 @@
 
 /* Animaton Hover Btn */
 .chart-point .chart-point__btn:hover,
-.chart-to-get .chart-to-get__item:hover,
+.chart-to-get .chart-to-get__item img.btn-on:hover,
 .get-gifts .get-gifts__item:hover,
 .menu .menu__item:hover {
     scale: 1.1;
     filter: brightness(1.2);
     transition: .3s linear;
+}
+
+.chart-to-get .btn-on {
+    cursor: pointer;
+    filter: grayscale(.1);
 }
 
 /* .chart-to-get .btn-off:hover {
